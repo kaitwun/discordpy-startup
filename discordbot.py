@@ -17,5 +17,9 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
-
+@client.event
+async def on_message(message):
+    if message.content == "/neko":
+        await message.channel.send("にゃーん")
+    
 bot.run(token)
